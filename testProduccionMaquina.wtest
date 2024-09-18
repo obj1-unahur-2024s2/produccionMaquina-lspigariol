@@ -24,3 +24,21 @@ describe "group of tests de la maquina" {
     assert.equals([43,49,62,39], maquina.produccionesSuperioresA(35))
   }
 }
+
+
+
+describe "group of tests del horno" {
+
+  test "el horno produjo alguna vez un producto" {
+    horno.producir(pan)
+    assert.that(horno.algunDiaSeProdujo(5))
+  }
+
+
+  test "el horno produjo algo apto celiaco" {
+    horno.producir(factura)
+    horno.producir(sanguchito)
+    horno.producir(bizcocho)
+    assert.equals(bizcocho, horno.elPrimeroParaCeliaco())
+  }
+}
