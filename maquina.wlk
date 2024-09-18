@@ -1,5 +1,9 @@
 object maquina {
 
-    const produccion = [5,70,1,30]
+    const produccion = []
     method algunDiaSeProdujo(cantidad) = produccion.contains(cantidad)
+
+    method producir(cant){
+      produccion.add(cant)
+    }
   }
