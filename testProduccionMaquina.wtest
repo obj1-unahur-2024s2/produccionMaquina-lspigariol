@@ -13,4 +13,14 @@ describe "group of tests de la maquina" {
      assert.notThat(maquina.algunDiaSeProdujo(100000000000))
   }
 
+
+  test "producciones superiores a un valor dado" {
+    maquina.producir(43)
+    maquina.producir(18)
+    maquina.producir(49)
+    maquina.producir(62)
+    maquina.producir(33)
+    maquina.producir(39)
+    assert.equals([43,49,62,39], maquina.produccionesSuperioresA(35))
+  }
 }
